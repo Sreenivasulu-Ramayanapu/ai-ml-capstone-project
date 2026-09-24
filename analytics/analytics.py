@@ -1,5 +1,4 @@
 import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -14,11 +13,11 @@ from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, r
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier
-import matplotlib.pyplot as plt
-from imblearn.over_sampling import SMOTE
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, root_mean_squared_error, r2_score
-import matplotlib.pyplot as plt
+from imblearn.over_sampling import SMOTE
+
+
 
 """
     Analytics script for the Titanic dataset
@@ -33,6 +32,7 @@ df = pd.read_csv("titanic.csv")
 print(df.info())
 print(df.describe())
 print(df.shape) 
+
 #Apply missing-value handling per column, following this threshold rule (under 5% missing → drop those rows; 5%–30% missing → impute) — and for any column whose missing rate is so high that imputation would be unreliable, explicitly decide to either drop the column or encode "missing" as its own category, and justify that decision in writing. State the exact percentage you measured for each affected column before choosing its strategy.
 missing_percent = df.isnull().sum() / len(df) * 100
 print(missing_percent)
