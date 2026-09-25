@@ -1,0 +1,7 @@
+chromadb
+sentence-transformers
+langgraph
+fastapi
+uvicorn[standard]
+pydantic
+# openai  # only needed for the optional MOCK_LLM=0 real-LLM extension
